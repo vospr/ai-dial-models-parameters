@@ -10,10 +10,40 @@ from task.app.main import run
 # - claude-3-7-sonnet@20250219
 # - gemini-2.5-pro
 
+import os
+os.environ['DIAL_API_KEY'] = 'dial-fxbasxs2h6t7brhnbqs36omhe2y'
+
+# Test with gpt-4o and n=3
+print("\n" + "="*50)
+print("Testing with gpt-4o and n=3")
+print("="*50)
 run(
-    # TODO:
-    #  1. Provide `deployment_name` with model from the list above👆
-    #  2. Use `n` parameter with value in range from 1 to 5!
+    deployment_name='applications/public/gpt-4o',
+    n=3,
+    print_request=False,
+    print_only_content=False,
+)
+
+# Test with claude-3-7-sonnet and n=2
+print("\n" + "="*50)
+print("Testing with claude-3-7-sonnet@20250219 and n=2")
+print("="*50)
+run(
+    deployment_name='applications/public/claude-3-7-sonnet@20250219',
+    n=2,
+    print_request=False,
+    print_only_content=False,
+)
+
+# Test with gemini-2.5-pro and n=4
+print("\n" + "="*50)
+print("Testing with gemini-2.5-pro and n=4")
+print("="*50)
+run(
+    deployment_name='applications/public/gemini-2.5-pro',
+    n=4,
+    print_request=False,
+    print_only_content=False,
 )
 
 # Pay attention to the number of choices in the response!

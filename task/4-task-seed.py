@@ -8,11 +8,30 @@ from task.app.main import run
 #       Default: None or random unless specified on the LLM side
 #  User massage: Name a random animal
 
+import os
+os.environ['DIAL_API_KEY'] = 'dial-fxbasxs2h6t7brhnbqs36omhe2y'
+
+# Test with seed=42 and n=5 (should produce consistent results)
+print("\n" + "="*50)
+print("Testing with seed=42 and n=5")
+print("="*50)
 run(
-    deployment_name='gpt-4o',
-    # TODO:
-    #  1. Use `seed` parameter with value 42 (or whatever you want)
-    #  2. Use `n` parameter with value 5
+    deployment_name='applications/public/gpt-4o',
+    seed=42,
+    n=5,
+    print_request=False,
+    print_only_content=False,
+)
+
+# Test without seed and n=5 (should produce varying results)
+print("\n" + "="*50)
+print("Testing without seed and n=5 (for comparison)")
+print("="*50)
+run(
+    deployment_name='applications/public/gpt-4o',
+    n=5,
+    print_request=False,
+    print_only_content=False,
 )
 
 # Check the content in choices. The expected result is that in almost all choices the result will be the same.
