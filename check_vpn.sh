@@ -95,7 +95,7 @@ if [ ! -z "$DNS_RESULT" ] && nc -z -w 5 $ENDPOINT 443 > /dev/null 2>&1; then
     echo "✅ VPN appears to be working correctly!"
     echo ""
     echo "You can now run the tests:"
-    echo "  cd /Users/apple/app-templates/ai-dial-models-parameters"
+    echo "  cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters"
     echo "  source .venv/bin/activate"
     echo "  python test1_models.py"
 else

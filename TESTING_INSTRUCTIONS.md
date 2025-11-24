@@ -49,7 +49,7 @@ All implementation tasks have been completed and pushed to GitHub:
 ### Option 1: Run Consolidated Test File (Recommended for Screenshots)
 
 ```bash
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 source .venv/bin/activate
 python Test.py
 ```
@@ -64,7 +64,7 @@ python Test.py
 ### Option 2: Run Individual Task Files
 
 ```bash
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 source .venv/bin/activate
 
 # Run individual tasks (each requires user input and 'exit' to finish)

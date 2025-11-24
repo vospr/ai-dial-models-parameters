@@ -1,6 +1,6 @@
 """
-Simplified test file for all 8 DIAL API parameter tasks
-Each task runs once with one parameter and one model for easy screenshot capture
+Test file with manual pauses for screenshot capture
+Press Enter after each test to continue to the next one
 """
 import os
 import json
@@ -66,10 +66,21 @@ def test_api(model, prompt, description, **kwargs):
     except Exception as e:
         print(f"✗ Exception: {str(e)}")
 
-# Run all 8 tests
+def pause_for_screenshot(test_number, total_tests):
+    """Pause and wait for user to press Enter"""
+    print("\n" + "-"*70)
+    if test_number < total_tests:
+        input(f"📸 Take screenshot, then press ENTER to continue to Test {test_number + 1}...")
+    else:
+        input("📸 Take final screenshot, then press ENTER to finish...")
+
+# Run all 8 tests with pauses
 print("\n" + "="*70)
-print("DIAL API PARAMETER EXPLORATION - SIMPLIFIED TESTS")
+print("DIAL API PARAMETER EXPLORATION - SCREENSHOT MODE")
 print("="*70)
+print("This script will run each test and pause for screenshots.")
+print("Press ENTER after taking each screenshot to continue.")
+input("\nPress ENTER to start...")
 
 # Test 1: Different Models
 test_api(
@@ -77,6 +88,7 @@ test_api(
     prompt="What LLMs can do?",
     description="Task 1 - Different Models (GPT-4o)"
 )
+pause_for_screenshot(1, 8)
 
 # Test 2: n parameter (multiple completions)
 test_api(
@@ -85,6 +97,7 @@ test_api(
     description="Task 2 - Multiple Completions (n=3)",
     n=3
 )
+pause_for_screenshot(2, 8)
 
 # Test 3: temperature parameter
 test_api(
@@ -93,6 +106,7 @@ test_api(
     description="Task 3 - Temperature Control (temperature=1.5)",
     temperature=1.5
 )
+pause_for_screenshot(3, 8)
 
 # Test 4: seed parameter
 test_api(
@@ -102,6 +116,7 @@ test_api(
     seed=42,
     n=5
 )
+pause_for_screenshot(4, 8)
 
 # Test 5: max_tokens parameter
 test_api(
@@ -110,6 +125,7 @@ test_api(
     description="Task 5 - Max Tokens Limit (max_tokens=10)",
     max_tokens=10
 )
+pause_for_screenshot(5, 8)
 
 # Test 6: frequency_penalty parameter
 test_api(
@@ -118,6 +134,7 @@ test_api(
     description="Task 6 - Frequency Penalty (frequency_penalty=2.0)",
     frequency_penalty=2.0
 )
+pause_for_screenshot(6, 8)
 
 # Test 7: presence_penalty parameter
 test_api(
@@ -126,6 +143,7 @@ test_api(
     description="Task 7 - Presence Penalty (presence_penalty=2.0)",
     presence_penalty=2.0
 )
+pause_for_screenshot(7, 8)
 
 # Test 8: stop parameter
 test_api(
@@ -134,8 +152,9 @@ test_api(
     description="Task 8 - Stop Sequences (stop='\\n\\n')",
     stop="\n\n"
 )
+pause_for_screenshot(8, 8)
 
 print("\n" + "="*70)
-print("ALL TESTS COMPLETED!")
+print("✅ ALL TESTS COMPLETED!")
 print("="*70)
 

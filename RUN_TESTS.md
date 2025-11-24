@@ -6,7 +6,7 @@
 
 ```bash
 # Navigate to project directory
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 
 # Activate virtual environment
 source .venv/bin/activate
@@ -106,7 +106,7 @@ Each test:
 If you want to run all tests one after another:
 
 ```bash
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 source .venv/bin/activate
 
 python test1_models.py

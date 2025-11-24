@@ -13,7 +13,7 @@
 
 ### Step 2: Navigate to Project
 ```bash
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 ```
 
 ### Step 3: Activate Virtual Environment
@@ -90,7 +90,7 @@ This will:
 
 ```bash
 # Step 1: Setup (one time)
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 source .venv/bin/activate
 
 # Step 2: Run a test
@@ -168,7 +168,7 @@ ai-proxy.lab.epam.com
 
 ```bash
 # Setup (do once)
-cd /Users/apple/app-templates/ai-dial-models-parameters
+cd /mnt/c/Users/AndreyPopov/ai-dial-models-parameters
 source .venv/bin/activate
 
 # Run any test
